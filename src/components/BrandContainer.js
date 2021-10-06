@@ -16,6 +16,8 @@ export default function BrandContainer() {
     function populateBrands() {
         return brands.map(brand => <Brand brand={brand} deleteBrand={deleteBrand} updateBrand={updateBrand} key={brand.id} />)
     }
+
+    
     //DELETE METHOD
     function deleteBrand(brand) {
         fetch(BASE_URL + 'brands/' + brand.id, {
@@ -25,7 +27,7 @@ export default function BrandContainer() {
         const newBrands = brands.filter(brd => brd.id !==brand.id)
         setBrands(newBrands)
     }
-
+        //UPDATE
     function updateBrand(brand){
         fetch(BASE_URL + 'brands/' + brand.id,{
             method: "UPDATE",
