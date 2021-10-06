@@ -68,6 +68,7 @@ export default function BrandContainer() {
     }
     return (
         <div>
+            <h1>Jersey Reivew</h1>
             {brands && populateBrands() }
             <BrandForm createBrand={createBrand} />
         </div>
