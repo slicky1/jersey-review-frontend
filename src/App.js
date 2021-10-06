@@ -4,6 +4,9 @@ import BrandContainer from './components/BrandContainer';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import BrandDetails from './BrandDetails';
 import NavBar from './components/NavBar';
+import CountryContainer from './components/CountryContainer';
+// import CountryForm from './CountryForm';
+import CountryDetails from './constraints/CountryDetails';
 
 function App() {
   return (
@@ -20,7 +23,17 @@ function App() {
       </Route>
       <Route exact path="/brands/:id">
         <BrandDetails />
+        </Route>
+
+        <Route exact path="/countries">
+      <CountryContainer />
       </Route>
+      
+      
+      <Route exact path="/countries/:id">
+        <CountryDetails />
+      </Route>
+
 
       </Switch>
     </div>
