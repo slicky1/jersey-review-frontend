@@ -21,7 +21,9 @@ export default function Brand({brand, deleteBrand, updateBrand}) {
                 <p> {brand.name} </p>
 
                 <button onClick={() => deleteBrand(brand)}> Delete Brand</button>
-                <form onSubmit={(e) =>{e.preventDefault()}}> 
+
+                
+                <form onSubmit={handleUpdate}>
                     <input name="name" value={newBrand.name} onChange={handleChange} />
                     <button type="submit">Update Brand</button>
                     

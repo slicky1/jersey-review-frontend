@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {BASE_URL} from '../constraints/index.js'
 import Brand from './Brand.js'
+import BrandForm from './BrandForm.js'
 
 export default function BrandContainer() {
 
@@ -17,6 +18,25 @@ export default function BrandContainer() {
         return brands.map(brand => <Brand brand={brand} deleteBrand={deleteBrand} updateBrand={updateBrand} key={brand.id} />)
     }
 
+    //CREATE METHOD
+
+    function createBrand(brand) {
+        fetch (BASE_URL + 'brands', {
+            method: "POST",
+            body: JSON.stringify(brand),
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            }
+        })
+        const newBrands = brands.map(brd => {
+            if (brd.id === brand.id) {
+                brd = brand
+            }
+            return brd
+        })
+        setBrands([...newBrands])
+    }
     
     //DELETE METHOD
     function deleteBrand(brand) {
@@ -29,21 +49,27 @@ export default function BrandContainer() {
     }
         //UPDATE
     function updateBrand(brand){
-        fetch(BASE_URL + 'brands/' + brand.id,{
-            method: "UPDATE",
-            body: JSON.stringify(brand)
-        })
+        fetch(BASE_URL + 'brands/' + brand.id, {
+            method: "PATCH",
+            body: JSON.stringify(brand),
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            },
+        });
 
         const newBrands = brands.map(brd => {
             if (brd.id === brand.id) {
                 brd = brand
             }
+            return brd
         })
         setBrands([...newBrands])
     }
     return (
         <div>
             {brands && populateBrands() }
+            <BrandForm createBrand={createBrand} />
         </div>
     )
 }
