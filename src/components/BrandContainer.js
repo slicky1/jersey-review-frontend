@@ -27,17 +27,17 @@ export default function BrandContainer() {
     }
 
     function updateBrand(brand){
-        fetch(BASE_URL + 'brands/' + brand.id),{
+        fetch(BASE_URL + 'brands/' + brand.id,{
             method: "UPDATE",
             body: JSON.stringify(brand)
-        }
+        })
 
         const newBrands = brands.map(brd => {
-            if(brd.id === brand.id) {
+            if (brd.id === brand.id) {
                 brd = brand
             }
         })
-        setBrands(newBrands)
+        setBrands([...newBrands])
     }
     return (
         <div>
