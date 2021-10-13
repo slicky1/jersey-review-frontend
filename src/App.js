@@ -7,6 +7,8 @@ import NavBar from './components/NavBar';
 import CountryContainer from './components/CountryContainer';
 // import CountryForm from './CountryForm';
 import CountryDetails from './constraints/CountryDetails';
+import TeamDetails from './components/TeamDetails';
+
 
 function App() {
   return (
@@ -32,6 +34,14 @@ function App() {
       
       <Route exact path="/countries/:id">
         <CountryDetails />
+      </Route>
+
+      {/* <Route exact path="/teams">
+      <TeamContainer />
+      </Route> */}
+
+      <Route exact path="/teams/:id">
+        <TeamDetails />
       </Route>
 
 

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 import { BASE_URL } from '../constraints'
-import Team from '../components/Team'
+import Team from '../components/Teams'
 
 export default function CountryDetails() {
     const [country, SetCountry] = useState(null)
@@ -23,7 +23,7 @@ export default function CountryDetails() {
 
     return (
         <div>
-            {/* Country Details: Country id: {id} */}
+            Country Details: Country id: {id}
            
             {country && (
                 <>

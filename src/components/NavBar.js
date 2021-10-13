@@ -6,6 +6,7 @@ export default function NavBar() {
         <div>
             <Link to="/brands">All Brands</Link>
             <Link to="/countries">All Countries</Link>
+            
         </div>
     )
 }
