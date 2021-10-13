@@ -10,10 +10,10 @@ export default function Country({country, deleteCountry, updateCountry}) {
             setNewCountry({...updatedValue})
         }
 
-            function handleUpdate(e){
-                e.preventDefault()
-                updateCountry(newCountry)
-            }
+            // function handleUpdate(e){
+            //     e.preventDefault()
+            //     updateCountry(newCountry)
+            // }
 
 
     return (
@@ -30,14 +30,14 @@ export default function Country({country, deleteCountry, updateCountry}) {
                 
                 <p>{country.img_source}</p>
 
-                <button onClick={() => deleteCountry(country)}> Delete country</button>
+                {/* <button onClick={() => deleteCountry(country)}> Delete country</button> */}
 
                 
-                <form onSubmit={handleUpdate}>
+                {/* <form onSubmit={handleUpdate}>
                     <input name="name" value={newCountry.name} onChange={handleChange} />
                     <button type="submit">Update country</button>
                     
-                </form>
+                </form> */}
                 
             <br />
         </div>

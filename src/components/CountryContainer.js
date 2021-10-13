@@ -69,7 +69,7 @@ export default function CountryContainer() {
         <div>
             <h1>Jersey Reivew</h1>
             {countries && populateCountries() }
-            <CountryForm createCountry={createCountry} />
+            {/* <CountryForm createCountry={createCountry} /> */}
         </div>
     )
 }

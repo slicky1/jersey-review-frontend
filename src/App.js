@@ -8,6 +8,7 @@ import CountryContainer from './components/CountryContainer';
 // import CountryForm from './CountryForm';
 import CountryDetails from './constraints/CountryDetails';
 import TeamDetails from './components/TeamDetails';
+import HomePage from './components/HomePage';
 
 
 function App() {
@@ -15,10 +16,11 @@ function App() {
     <Router>
 
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       <Switch>
         <Route exact path="/">
-          <h2>Home Page</h2>
+        {/* <NavBar /> */}
+          < HomePage/>
           </Route>
         <Route exact path="/brands">
       <BrandContainer />
