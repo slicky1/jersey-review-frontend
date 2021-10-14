@@ -19,16 +19,14 @@ export default function Country({country, deleteCountry, updateCountry}) {
     return (
         <div>
             <br />
-                {/* <p> {country.name} </p>
-                <p> {country.img_source} </p> */}
-
-                {/* <Link to = {`/countries/${country.id}`}>  */}
+               
                 <Link to = {`/countries/${country.id}`}> 
                 
                 <p>{country.name}</p>
+                <p>{country.img_source}</p>
                </Link>
                 
-                <p>{country.img_source}</p>
+               
 
                 {/* <button onClick={() => deleteCountry(country)}> Delete country</button> */}
 

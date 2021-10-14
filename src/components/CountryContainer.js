@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import { BASE_URL } from '../constraints'
 import Country from '../Country'
 import CountryForm from '../CountryForm'
+import '../styles/CountryContainer.css'
 
 export default function CountryContainer() {
     const [countries, setCountries] = useState(null)
@@ -66,10 +67,13 @@ export default function CountryContainer() {
         setCountries([...newCountries])
     }
     return (
-        <div>
-            <h1>Jersey Reivew</h1>
-            {countries && populateCountries() }
-            {/* <CountryForm createCountry={createCountry} /> */}
+        <div className = 'country-image'>
+                 <div className = "country-container">
+                       <h1>Jersey Reivew</h1>
+                     {countries && populateCountries() }
+                    {/* <CountryForm createCountry={createCountry} /> */}
         </div>
+        </div>
+       
     )
 }
