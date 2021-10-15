@@ -10,7 +10,22 @@
 }
 
 
+
 .country-container{
     font-family: 'Lobster Two', cursive;
     letter-spacing: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: rgb(10, 3, 37);
+    text-align: center;
+    
+
+     
+    
+}
+
+.country-header{
+    text-align: center;
+    color: crimson;
 }

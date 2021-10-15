@@ -8,6 +8,7 @@ import CountryContainer from './components/CountryContainer';
 // import CountryForm from './CountryForm';
 import CountryDetails from './constraints/CountryDetails';
 import TeamDetails from './components/TeamDetails';
+import JerseyDetails from './components/JerseyDetails';
 import HomePage from './components/HomePage';
 
 
@@ -44,6 +45,10 @@ function App() {
 
       <Route exact path="/teams/:id">
         <TeamDetails />
+      </Route>
+
+      <Route exact path="/jerseys/:id">
+        <JerseyDetails />
       </Route>
 
 

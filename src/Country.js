@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
+import '../src/styles/Country.css';
 
 export default function Country({country, deleteCountry, updateCountry}) {
         const [newCountry, setNewCountry] = useState({...country}) 
@@ -17,14 +18,25 @@ export default function Country({country, deleteCountry, updateCountry}) {
 
 
     return (
-        <div>
+    <div className= "card">
             <br />
-               
+        <div className= "img-conatiner">
                 <Link to = {`/countries/${country.id}`}> 
-                
                 <p>{country.name}</p>
-                <p>{country.img_source}</p>
-               </Link>
+                </Link>
+            
+                     <div className= "country-img"> 
+                        <img src={country.img_source} ></img>
+                    
+        </div>
+
+    </div>
+                
+                
+                
+                
+                
+               
                 
                
 

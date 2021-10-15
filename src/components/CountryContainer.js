@@ -69,10 +69,10 @@ export default function CountryContainer() {
     return (
         <div className = 'country-image'>
                  <div className = "country-container">
-                       <h1>Jersey Reivew</h1>
+                        <div className= "country-header"> <h1>Countries</h1> </div>
                      {countries && populateCountries() }
                     {/* <CountryForm createCountry={createCountry} /> */}
-        </div>
+                </div>
         </div>
        
     )
